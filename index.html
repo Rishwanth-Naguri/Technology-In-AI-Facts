@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tech Facts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #e0eafc, #cfdef3); /* Gradient background */
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow */
+            transition: transform 0.3s ease-in-out; /* Smooth transform */
+             backdrop-filter: blur(5px); /* Apply a blur effect */
+        }
+        .container:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+
+        h1 {
+            color: #2c3e50; /* Darker header color */
+            margin-bottom: 20px;
+             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+        }
+
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        button {
+             background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient button */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Button shadow */
+        }
+
+         button:hover {
+           background: linear-gradient(135deg, #2980b9, #3498db); /* Gradient button */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+        }
+         button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random AI Tech Facts</h1>
+        <p id="factDisplay">Click the button to get a fact</p>
+        <button id="factButton">Get Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "AI is not a single technology: It's a broad field encompassing various techniques like machine learning, deep learning, natural language processing, and computer vision.",
+            "Machine learning algorithms learn from data: They identify patterns and make predictions or decisions without explicit programming for each specific task.",
+            "Deep learning uses artificial neural networks: These networks, inspired by the human brain, have multiple layers to analyze complex data.",
+            "Natural Language Processing (NLP) enables machines to understand and process human language: This is used in applications like chatbots, translation, and sentiment analysis.",
+            "Computer Vision allows machines to 'see' and interpret images and videos: This is crucial in areas like facial recognition, medical image analysis, and autonomous driving.",
+            "AI is increasingly being used in diverse industries: Including healthcare, finance, retail, manufacturing, and transportation, among others.",
+            "AI requires significant computational power and data: Training complex models often demands specialized hardware and massive datasets.",
+            "Ethical concerns surrounding AI development and deployment are growing: Issues include bias in algorithms, job displacement, and the potential misuse of AI technologies.",
+            "AI technology is rapidly evolving: New models, algorithms, and applications are constantly emerging, pushing the boundaries of what's possible.",
+            "AI is not sentient or conscious: Despite advancements, current AI systems are designed to perform specific tasks and lack true understanding or consciousness."
+        ];
+
+        const factDisplay = document.getElementById('factDisplay');
+        const factButton = document.getElementById('factButton');
+
+        factButton.addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
